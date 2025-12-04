@@ -1,0 +1,54 @@
+---
+title: "Results"
+---
+
+## Project Specifications List
+
+The original proposed specifications are listed here. Note that the playback specs are deleted after consulting Prof. Spencer on downscaling the project.
+
+### Input: detection and analysis
+* User can stop and start transcription using physical hardware (e.g. switch/button)
+* System converts analog microphone signals into digital
+* Uses FFT to extract clear signal from input
+* System calculates input frequency and rounds to the nearest half note (e.g. A3#, C4)
+* System able to detect duration accurate to 1/16 beat at the given BPM
+
+### Output: display and audio
+* Display updates at > 24 Hz
+* Note durations are displayed for 120 BPM
+* Notes are displayed on VGA monitor ~75 ms after note is released
+* ~~Playback audio resembles the input~~
+* ~~Playback audio uses an audio codec so that output sound is not square wave~~
+* ~~User can control the volume of playback audio~~
+* ~~User can control when to playback the transcribed audio (e.g. switch/button), but can only play the audio  when transcription is stopped~~
+
+## Specifications Result
+
+Here, we will explain the specs that are met by the project:
+
+* User can stop and start transcription using physical hardware (e.g. switch/button)
+Yes, the system includes a button which signals the MCU to start and stop transcribing.
+
+* System converts analog microphone signals into digital
+Yes, the ADC on the MCU worked, and we were able to obtain digital signals from the SPI. A logic analyzer result of the SPI transferring microphone signal is shown here:
+
+![SPI logic analyzer result](images/spi_result.jpeg)
+
+The mosi signals mostly sits around `80` because the microphone's quinscient voltage sits at have the voltage supplied.
+
+* Uses FFT to extract clear signal from input
+We were able to use FFT to extract signals and output notes detected. This is especially successful in simulation. In hardware, the system experiences instability due to the amount of environmental noises.
+
+* System calculates input frequency and rounds to the nearest half note (e.g. A3#, C4)
+Building on the previous spec, the FFT was able to clearly distinguish note, octave, and sharp in simulation. In hardware, it was also able to output certain notes.
+
+* System able to detect duration accurate to 1/16 beat at the given BPM
+The constraint of the system had to be changed to 1/2 of the beat due to the downscale of sampling rate.
+
+* Display updates at > 24 Hz
+Yes. the VGA is refreshing at a rate of 60 Hz.
+
+* Note durations are displayed for 120 BPM
+
+* Notes are displayed on VGA monitor ~75 ms after note is released
+

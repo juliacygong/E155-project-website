@@ -7,7 +7,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: fpga.qmd
+        text: FPGA
+      - href: mcu.qmd
+        text: MCU
+      - href: documentation.qmd
+        text: Documentation
+      - href: results.qmd
+        text: Results
+      - href: about.qmd
+        text: Team
 
 format:
   html:
@@ -16,6 +25,3 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-
