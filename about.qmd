@@ -1,4 +1,3 @@
-
 ---
 title: "About the Team"
 format:
@@ -39,42 +38,58 @@ Georgia Tai is a junior engineering student at Harvey Mudd College (HMC) with an
 
 ::::
 
-<!-- CSS Styling -->
 ```{=html}
 <style>
+/* 1. Center the Main Page Title */
+h1.title {
+  text-align: center;
+}
+
 .team-container {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
   margin-top: 2rem;
+  justify-content: center; /* Centers the columns on the screen */
 }
 
 .team-member {
+  /* --- KEY FIX STARTS HERE --- */
+  /* Turn the card into a vertical stack */
+  display: flex;
+  flex-direction: column;
+  /* Force all children (Image, Title, Text) to align to the center cross-axis */
+  align-items: center;
+  /* Center the text content itself */
+  text-align: center;
+  /* --- KEY FIX ENDS HERE --- */
+
   flex: 1;
   min-width: 300px;
   max-width: 600px;
 }
 
+/* We don't strictly need margin:auto anymore, but it's good safety */
 .profile-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
-  margin: 1rem auto;
+  margin: 1rem 0; /* Changed to just vertical margin */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .social-links {
-  text-align: center;
   margin: 1.5rem 0;
   font-size: 0.95rem;
+  width: 100%; /* Ensure links span full width so they center properly */
 }
 
 .social-links a {
   text-decoration: none;
   color: #2563eb;
   transition: color 0.2s;
+  margin: 0 5px; /* Add small spacing between links */
 }
 
 .social-links a:hover {
@@ -82,8 +97,10 @@ Georgia Tai is a junior engineering student at Harvey Mudd College (HMC) with an
   text-decoration: underline;
 }
 
+/* Force the headers to center, overriding any theme defaults */
 .team-member h2 {
-  text-align: center;
   margin-top: 1.5rem;
+  text-align: center !important;
+  width: 100%;
 }
 </style>
