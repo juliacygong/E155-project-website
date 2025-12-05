@@ -12,7 +12,7 @@ Both of us are interested in digital design and audio processing, so we wanted t
 ## System Block Diagram
 ![](images/system.png)
 
-The system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU's internal ADC. The MCU's ADC output is sent over to the FPGA using SPI. The music score and notes and output to the VGA monitor
+The system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU's internal ADC. The MCU's ADC output is sent over to the FPGA using SPI. The music score and notes are output the FPGA to the VGA monitor. 
 
 ## Acknowledgements
 
