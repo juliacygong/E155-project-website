@@ -70,5 +70,5 @@ Before hardware implementation, the top level module of the FFT, `fft_ctrl`, was
 Each modules within the FFT, including `fftfull`, `addgen`, etc., are tested by separate testbench too.
 
 ## Note Display
-<iframe src="https://drive.google.com/file/d/1m4o0ek6JZH5q7guccxkDqV59gKsoG6BX/view" 
+<iframe src="https://drive.google.com/file/d/1m4o0ek6JZH5q7guccxkDqV59gKsoG6BX/preview" 
         width="740" height="480" allow="autoplay"></iframe>
