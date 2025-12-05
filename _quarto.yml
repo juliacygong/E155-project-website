@@ -7,12 +7,12 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: documentation.qmd
+        text: Documentation
       - href: fpga.qmd
         text: FPGA
       - href: mcu.qmd
         text: MCU
-      - href: documentation.qmd
-        text: Documentation
       - href: results.qmd
         text: Results
       - href: about.qmd
