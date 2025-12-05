@@ -7,12 +7,17 @@ This project aims to take in sound inputs, whether using a keyboard, any instrum
 On the hardware level, an analog microphone will take in sounds, where the MCU will convert them into digital signals using ADC and send the converted signals to the FPGA. The MCU will then send the digital signals to the FPGA using SPI. Then, the FPGA will use FFT to extract the frequency and duration of the note inputted. The array of notes will then be used by the FPGA to calculate the pixels for displaying the score on a VGA display. This array of notes, after transcription ends, will be sent to the MCU through SPI to generate the playback audio. The user should be able to control the music transcription and play back audio with a hardware components such as a switch or a button, and control the volume with a potentiometer.
 
 ## Project Motivation
-Both of us are interested in digital design and audio processing, so we wanted to leverage the FPGA's fast computational capabilites to process sound for our project. Due to the importance and wide applications of the FFT, we wanted to design and integrate FFT in hardware. We chose VGA to display our output because we wanted to accurately depict a music score, which required a higher pixel resolution
+Both of us are interested in digital design and audio processing, so we wanted to leverage the FPGA's fast computational capabilites to process sound for our project. Due to the importance and wide applications of the FFT, we wanted to design and integrate FFT in hardware. We chose VGA to display our output because we wanted to accurately depict a music score, which required a higher pixel resolution.
 
 ## System Block Diagram
 ![](images/system.png)
 
-The system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU's internal ADC. The MCU's ADC output is sent over to the FPGA using SPI. The music score and notes are output the FPGA to the VGA monitor. 
+The system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU's internal ADC. The MCU's ADC output is sent over to the FPGA using SPI. The music score and notes are output from FPGA to the VGA monitor. 
+
+## Note Display
+<iframe src="https://drive.google.com/file/d/1m4o0ek6JZH5q7guccxkDqV59gKsoG6BX/view?usp=sharing" 
+        width="740" height="480" allow="autoplay"></iframe>
+        
 
 ## Acknowledgements
 
