@@ -60,7 +60,7 @@
     "href": "index.html#note-display",
     "title": "Live Music Transcriber",
     "section": "Note Display",
-    "text": "Note Display\nVideo"
+    "text": "Note Display"
   },
   {
     "objectID": "index.html#acknowledgements",
@@ -96,6 +96,13 @@
     "title": "Results",
     "section": "Testbenches",
     "text": "Testbenches\nBefore hardware implementation, the top level module of the FFT, fft_ctrl, was tested with a testbench which takes a generated ideal bitstream data, and input into the system bit by bit. This simulates the SPI transfer action in real hardward, and as shown in the picture, the FFT was able to produce a a stable note D5#, or db in with our defined encodings.\n\n\n\nWaveform of fft_ctrl testbench\n\n\nEach modules within the FFT, including fftfull, addgen, etc., are tested by separate testbench too."
+  },
+  {
+    "objectID": "results.html#note-display",
+    "href": "results.html#note-display",
+    "title": "Results",
+    "section": "Note Display",
+    "text": "Note Display"
   },
   {
     "objectID": "fpga.html",
