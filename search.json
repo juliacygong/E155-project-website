@@ -46,14 +46,21 @@
     "href": "index.html#project-motivation",
     "title": "Live Music Transcriber",
     "section": "Project Motivation",
-    "text": "Project Motivation\nBoth of us are interested in digital design and audio processing, so we wanted to leverage the FPGA’s fast computational capabilites to process sound for our project. Due to the importance and wide applications of the FFT, we wanted to design and integrate FFT in hardware. We chose VGA to display our output because we wanted to accurately depict a music score, which required a higher pixel resolution"
+    "text": "Project Motivation\nBoth of us are interested in digital design and audio processing, so we wanted to leverage the FPGA’s fast computational capabilites to process sound for our project. Due to the importance and wide applications of the FFT, we wanted to design and integrate FFT in hardware. We chose VGA to display our output because we wanted to accurately depict a music score, which required a higher pixel resolution."
   },
   {
     "objectID": "index.html#system-block-diagram",
     "href": "index.html#system-block-diagram",
     "title": "Live Music Transcriber",
     "section": "System Block Diagram",
-    "text": "System Block Diagram\n\nThe system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU’s internal ADC. The MCU’s ADC output is sent over to the FPGA using SPI. The music score and notes are output the FPGA to the VGA monitor."
+    "text": "System Block Diagram\n\nThe system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU’s internal ADC. The MCU’s ADC output is sent over to the FPGA using SPI. The music score and notes are output from FPGA to the VGA monitor."
+  },
+  {
+    "objectID": "index.html#note-display",
+    "href": "index.html#note-display",
+    "title": "Live Music Transcriber",
+    "section": "Note Display",
+    "text": "Note Display"
   },
   {
     "objectID": "index.html#acknowledgements",
@@ -158,20 +165,6 @@
     "href": "about.html",
     "title": "About the Team",
     "section": "",
-    "text": "{{&lt; fa brands linkedin &gt;}} LinkedIn | {{&lt; fa brands github &gt;}} GitHub | {{&lt; fa globe &gt;}} Website\n\nJulia Gong is a junior engineering major at Harvey Mudd College. She is interested in digital design and the integration of hardware systems. Outside of engineering, she enjoys creative, hands-on work, including pottery, bead embroidery, painting, and knitting.\n\n\n\n\n\n{{&lt; fa brands linkedin &gt;}} LinkedIn | {{&lt; fa brands github &gt;}} GitHub | {{&lt; fa globe &gt;}} Website\n\nGeorgia Tai is a junior engineering student at Harvey Mudd College (HMC) with an interest in computer and electrical engineering. Born and raised in Hsinchu, Taiwan, she developed a passion for electrical engineering. Outside of engineering, she enjoys music, drawing, and reading mangas."
-  },
-  {
-    "objectID": "about.html#julia-gong",
-    "href": "about.html#julia-gong",
-    "title": "About the Team",
-    "section": "",
-    "text": "{{&lt; fa brands linkedin &gt;}} LinkedIn | {{&lt; fa brands github &gt;}} GitHub | {{&lt; fa globe &gt;}} Website\n\nJulia Gong is a junior engineering major at Harvey Mudd College. She is interested in digital design and the integration of hardware systems. Outside of engineering, she enjoys creative, hands-on work, including pottery, bead embroidery, painting, and knitting."
-  },
-  {
-    "objectID": "about.html#georgia-tai",
-    "href": "about.html#georgia-tai",
-    "title": "About the Team",
-    "section": "",
-    "text": "{{&lt; fa brands linkedin &gt;}} LinkedIn | {{&lt; fa brands github &gt;}} GitHub | {{&lt; fa globe &gt;}} Website\n\nGeorgia Tai is a junior engineering student at Harvey Mudd College (HMC) with an interest in computer and electrical engineering. Born and raised in Hsinchu, Taiwan, she developed a passion for electrical engineering. Outside of engineering, she enjoys music, drawing, and reading mangas."
+    "text": "Julia Gong\n\n\n\nLinkedIn | GitHub | Website\n\nJulia Gong is a junior engineering major at Harvey Mudd College. She is interested in digital design and the integration of hardware systems. Outside of engineering, she enjoys creative, hands-on work, including pottery, bead embroidery, painting, and knitting.\n\n\n\nGeorgia Tai\n\n\n\nLinkedIn | GitHub | Website\n\nGeorgia Tai is a junior engineering student at Harvey Mudd College (HMC) with an interest in computer and electrical engineering. Born and raised in Hsinchu, Taiwan, she developed a passion for electrical engineering. Outside of engineering, she enjoys music, drawing, and reading mangas."
   }
 ]

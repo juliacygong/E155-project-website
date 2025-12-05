@@ -132,6 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#project-abstract" id="toc-project-abstract" class="nav-link active" data-scroll-target="#project-abstract">Project Abstract</a></li>
   <li><a href="#project-motivation" id="toc-project-motivation" class="nav-link" data-scroll-target="#project-motivation">Project Motivation</a></li>
   <li><a href="#system-block-diagram" id="toc-system-block-diagram" class="nav-link" data-scroll-target="#system-block-diagram">System Block Diagram</a></li>
+  <li><a href="#note-display" id="toc-note-display" class="nav-link" data-scroll-target="#note-display">Note Display</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul>
 </nav>
@@ -165,12 +166,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="project-motivation" class="level2">
 <h2 class="anchored" data-anchor-id="project-motivation">Project Motivation</h2>
-<p>Both of us are interested in digital design and audio processing, so we wanted to leverage the FPGA’s fast computational capabilites to process sound for our project. Due to the importance and wide applications of the FFT, we wanted to design and integrate FFT in hardware. We chose VGA to display our output because we wanted to accurately depict a music score, which required a higher pixel resolution</p>
+<p>Both of us are interested in digital design and audio processing, so we wanted to leverage the FPGA’s fast computational capabilites to process sound for our project. Due to the importance and wide applications of the FFT, we wanted to design and integrate FFT in hardware. We chose VGA to display our output because we wanted to accurately depict a music score, which required a higher pixel resolution.</p>
 </section>
 <section id="system-block-diagram" class="level2">
 <h2 class="anchored" data-anchor-id="system-block-diagram">System Block Diagram</h2>
 <p><img src="images/system.png" class="img-fluid"></p>
-<p>The system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU’s internal ADC. The MCU’s ADC output is sent over to the FPGA using SPI. The music score and notes are output the FPGA to the VGA monitor.</p>
+<p>The system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU’s internal ADC. The MCU’s ADC output is sent over to the FPGA using SPI. The music score and notes are output from FPGA to the VGA monitor.</p>
+</section>
+<section id="note-display" class="level2">
+<h2 class="anchored" data-anchor-id="note-display">Note Display</h2>
+<iframe src="https://drive.google.com/file/d/1m4o0ek6JZH5q7guccxkDqV59gKsoG6BX/view?usp=sharing" width="740" height="480" allow="autoplay">
+</iframe>
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
@@ -253,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/juliacygong\.github\.io\/E155-project-website\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

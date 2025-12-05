@@ -34,7 +34,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -148,25 +147,28 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="team-container">
-<section id="julia-gong" class="level2 team-member">
-<h2 class="anchored" data-anchor-id="julia-gong">Julia Gong</h2>
+<div class="team-member">
+<div class="member-name">
+Julia Gong
+</div>
 <p><img src="images/julia_headshot.jpg" class="profile-img img-fluid"></p>
 <div class="social-links">
-<p><a href="https://www.linkedin.com/in/julia-gong-b8222830a">{{&lt; fa brands linkedin &gt;}} LinkedIn</a> | <a href="https://github.com/juliacygong">{{&lt; fa brands github &gt;}} GitHub</a> | <a href="https://juliacygong.github.io/E155/">{{&lt; fa globe &gt;}} Website</a></p>
+<p><a href="https://www.linkedin.com/in/julia-gong-b8222830a">LinkedIn</a> | <a href="https://github.com/juliacygong">GitHub</a> | <a href="https://juliacygong.github.io/E155/">Website</a></p>
 </div>
 <p>Julia Gong is a junior engineering major at Harvey Mudd College. She is interested in digital design and the integration of hardware systems. Outside of engineering, she enjoys creative, hands-on work, including pottery, bead embroidery, painting, and knitting.</p>
-</section>
-<section id="georgia-tai" class="level2 team-member">
-<h2 class="anchored" data-anchor-id="georgia-tai">Georgia Tai</h2>
+</div>
+<div class="team-member">
+<div class="member-name">
+Georgia Tai
+</div>
 <p><img src="images/georgia_headshot.jpg" class="profile-img img-fluid"></p>
 <div class="social-links">
-<p><a href="https://www.linkedin.com/in/georgia-tai/">{{&lt; fa brands linkedin &gt;}} LinkedIn</a> | <a href="https://github.com/georgiatai">{{&lt; fa brands github &gt;}} GitHub</a> | <a href="https://georgiatai.github.io/E155-portfolio/">{{&lt; fa globe &gt;}} Website</a></p>
+<p><a href="https://www.linkedin.com/in/georgia-tai/">LinkedIn</a> | <a href="https://github.com/georgiatai">GitHub</a> | <a href="https://georgiatai.github.io/E155-portfolio/">Website</a></p>
 </div>
 <p>Georgia Tai is a junior engineering student at Harvey Mudd College (HMC) with an interest in computer and electrical engineering. Born and raised in Hsinchu, Taiwan, she developed a passion for electrical engineering. Outside of engineering, she enjoys music, drawing, and reading mangas.</p>
-</section>
+</div>
 </div>
 <style>
-/* 1. Center the Main Page Title */
 h1.title {
   text-align: center;
 }
@@ -175,59 +177,55 @@ h1.title {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  justify-content: center;
   margin-top: 2rem;
-  justify-content: center; /* Centers the columns on the screen */
 }
 
 .team-member {
-  /* --- KEY FIX STARTS HERE --- */
-  /* Turn the card into a vertical stack */
-  display: flex;
-  flex-direction: column;
-  /* Force all children (Image, Title, Text) to align to the center cross-axis */
-  align-items: center;
-  /* Center the text content itself */
-  text-align: center;
-  /* --- KEY FIX ENDS HERE --- */
-
   flex: 1;
   min-width: 300px;
   max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* We don't strictly need margin:auto anymore, but it's good safety */
-.profile-img {
+.member-name {
+  font-size: 1.75rem;
+  font-weight: 600;   /* Bold */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.2;
+  color: #333;
+}
+
+.team-member img.profile-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 1rem 0; /* Changed to just vertical margin */
+  margin: 1rem auto;
+  display: block;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .social-links {
-  margin: 1.5rem 0;
-  font-size: 0.95rem;
-  width: 100%; /* Ensure links span full width so they center properly */
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .social-links a {
   text-decoration: none;
   color: #2563eb;
-  transition: color 0.2s;
-  margin: 0 5px; /* Add small spacing between links */
+  margin: 0 5px;
 }
 
 .social-links a:hover {
-  color: #1e40af;
   text-decoration: underline;
-}
-
-/* Force the headers to center, overriding any theme defaults */
-.team-member h2 {
-  margin-top: 1.5rem;
-  text-align: center !important;
-  width: 100%;
 }
 </style>
 
@@ -236,13 +234,6 @@ h1.title {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -306,7 +297,7 @@ h1.title {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/juliacygong\.github\.io\/E155-project-website\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
