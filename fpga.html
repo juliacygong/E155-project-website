@@ -242,9 +242,9 @@ a = Rotate_5(2j, i)
 \]</span> <span class="math display">\[
 b = Rotate_5(2j + 1, i)
 \]</span></p>
-<p>The address control unit that asserts commands to perform butterfly operations as well as memory read and write commands. The commands for writing and reading to RAM0 (ram0_a and ram0_b) and RAM1 (ram1_a and ram1_b) switch at every level. Since the system begins by loading the input data into RAM0, all the odd levels will read from RAM0 and write to RAM1 and all the even levels will read from RAM1 and write to RAM0. The proper a and b values are read from memory and input to the butterfly unit, and computes 8 bit real and imaginary values through the following equations</p>
+<p>The address control unit that asserts commands to perform butterfly operations as well as memory read and write commands. The commands for writing and reading to RAM0 (ram0_a and ram0_b) and RAM1 (ram1_a and ram1_b) switch at every level. Since the system begins by loading the input data into RAM0, all the odd levels will read from RAM0 and write to RAM1 and all the even levels will read from RAM1 and write to RAM0. The proper a and b values are read from memory and input to the butterfly unit, and computes 8 bit real and imaginary values through the following equations, where TW is the corresponding twiddle value.</p>
 <p><span class="math display">\[
-A' = A + B(TW) \]</span> <span class="math display">\[B' = A - B(TW) \]</span>, where TW is the corresponding twiddle value.</p>
+A' = A + B(TW) \]</span> <span class="math display">\[B' = A - B(TW) \]</span></p>
 <p>The complex butterfly outputs are written back into memory and read the next level. The outputs for the final FFT level are located in RAM0 (ram0_a and ram0_b) and an fft_done flag is asserted once the butterfly values of final level are fully calculated. The outputs of the level are then processed to extract the maximum k value and corresponding dominant frequency of the sample.</p>
 <p>The memory blocks we were using contains a 2 cycle read delay. Therefore, we had to implement a 2 cycle stall to before calculating the butterfly values. More of the detailed internal stalling and pipelining of the FFT design can be seen in our <a href="https://github.com/georgiatai/E155-final-project">Github Repository.</a>.</p>
 <section id="fft-block-diagram" class="level3">
@@ -266,7 +266,7 @@ A' = A + B(TW) \]</span> <span class="math display">\[B' = A - B(TW) \]</span>, 
 <li><p>Back porch: time after horizontal sync pulse and before start of visible line allows electron beam to stabilize before drawing next line</p></li>
 <li><p>Visible area: area where line is scanned</p></li>
 </ul>
-<p>The VGA top module is split into the Phase-Locked Loop (PLL) which generates the proper clock speed for VGA, the VGA control modle, which generates the horizontal and vertical sync signals based on our pixel resolution, and a music score module which draws the score lines, treble clef, and notes.</p>
+<p>The VGA top module is split into the Phase-Locked Loop (PLL) which generates the proper clock speed for VGA, the VGA control module, which generates the horizontal and vertical sync signals based on our pixel resolution, and a music score module which draws the score lines, treble clef, and notes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/pll.jpg" class="img-fluid figure-img"></p>
