@@ -15,8 +15,9 @@ Both of us are interested in digital design and audio processing, so we wanted t
 The system block diagram shows the flow of our design, starting with an input from a microphone which is sampled by the MCU's internal ADC. The MCU's ADC output is sent over to the FPGA using SPI. The music score and notes are output from FPGA to the VGA monitor. 
 
 ## Note Display
+
 <iframe src="https://drive.google.com/file/d/1m4o0ek6JZH5q7guccxkDqV59gKsoG6BX/preview" 
-        width="740" height="480" allow="autoplay"></iframe>
+        width="640" height="480" allow="autoplay"></iframe>
         
 
 ## Acknowledgements

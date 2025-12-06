@@ -59,11 +59,11 @@ $$
 b = Rotate_5(2j + 1, i)
 $$
 
-The address control unit that asserts commands to perform butterfly operations as well as memory read and write commands. The commands for writing and reading to RAM0 (ram0_a and ram0_b) and RAM1 (ram1_a and ram1_b) switch at every level. Since the system begins by loading the input data into RAM0, all the odd levels will read from RAM0 and write to RAM1 and all the even levels will read from RAM1 and write to RAM0. The proper a and b values are read from memory and input to the butterfly unit, and computes 8 bit real and imaginary values through the following equations
+The address control unit that asserts commands to perform butterfly operations as well as memory read and write commands. The commands for writing and reading to RAM0 (ram0_a and ram0_b) and RAM1 (ram1_a and ram1_b) switch at every level. Since the system begins by loading the input data into RAM0, all the odd levels will read from RAM0 and write to RAM1 and all the even levels will read from RAM1 and write to RAM0. The proper a and b values are read from memory and input to the butterfly unit, and computes 8 bit real and imaginary values through the following equations, where TW is the corresponding twiddle value. 
 
 $$
 A' = A + B(TW) $$
- $$B' = A - B(TW) $$, where TW is the corresponding twiddle value. 
+ $$B' = A - B(TW) $$
 
 
 The complex butterfly outputs are written back into memory and read the next level. The outputs for the final FFT level are located in RAM0 (ram0_a and ram0_b) and an fft_done flag is asserted once the butterfly values of final level are fully calculated. The outputs of the level are then processed to extract the maximum k value and corresponding dominant frequency of the sample. 
@@ -85,7 +85,7 @@ The VGA design contains several facts that determine how the pixels are displaye
 
 * Visible area: area where line is scanned
 
-The VGA top module is split into the Phase-Locked Loop (PLL) which generates the proper clock speed for VGA, the VGA control modle, which generates the horizontal and vertical sync signals based on our pixel resolution, and a music score module which draws the score lines, treble clef, and notes. 
+The VGA top module is split into the Phase-Locked Loop (PLL) which generates the proper clock speed for VGA, the VGA control module, which generates the horizontal and vertical sync signals based on our pixel resolution, and a music score module which draws the score lines, treble clef, and notes. 
 
 ![Figure 3: This image shows the oscilloscope trace of our PLL clock](images/pll.jpg)
 
